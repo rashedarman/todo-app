@@ -13,6 +13,9 @@ class TodoInput extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!this.state.title.trim()) return;
+
     this.props.addTodo(this.state.title);
     this.setState({ title: '' });
   };
