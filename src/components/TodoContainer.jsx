@@ -1,5 +1,7 @@
+import { nanoid } from 'nanoid';
 import React from 'react';
 import Header from './Header';
+
 import TodoInput from './TodoInput';
 import TodoList from './TodoList';
 
@@ -7,17 +9,17 @@ class TodoContainer extends React.Component {
   state = {
     todos: [
       {
-        id: 1,
+        id: nanoid(),
         title: 'Setup development environment',
         completed: true,
       },
       {
-        id: 2,
+        id: nanoid(),
         title: 'Develop website and add content',
         completed: false,
       },
       {
-        id: 3,
+        id: nanoid(),
         title: 'Deploy to live server',
         completed: false,
       },
@@ -40,7 +42,7 @@ class TodoContainer extends React.Component {
 
   addTodo = (title) => {
     const newTodo = {
-      id: 4,
+      id: nanoid(),
       title: title,
       completed: false,
     };
